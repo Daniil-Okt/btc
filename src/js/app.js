@@ -101,8 +101,22 @@ const swiper = new Swiper('.swiper-about', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable: true,
   },
   autoplay: {
     delay: 4000,
   },
+  
+
 });
+
+const checkboxQuizItem = document.querySelectorAll('.checkbox-quiz__item');
+const checkboxQuizLabel = document.querySelectorAll('.checkbox-quiz__label');
+
+if (checkboxQuizLabel.length > 0) {
+  checkboxQuizLabel.forEach(item => {
+    item.addEventListener('click', () => {
+      item.parentNode.classList.toggle('_active');
+    });
+  });
+}

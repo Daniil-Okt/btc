@@ -131,7 +131,7 @@
         position: relative;
         gap: rem(16);
         justify-content: end;
-
+        cursor: pointer;
         margin-top: rem(-54);
         @media(max-width:1000px){
             margin-top: rem(-30);

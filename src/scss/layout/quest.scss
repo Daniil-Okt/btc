@@ -1,0 +1,58 @@
+.quest {
+    padding: rem(96) 0 rem(96) 0;
+    @media(max-width:1000px){
+        padding: rem(80) 0 rem(80) 0;
+    }
+    @media(max-width:590px){
+        padding: rem(40) 0 rem(40) 0;
+    }
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: rem(64);
+        @media(max-width:1000px){
+            margin-bottom: rem(42);
+        }
+        @media(max-width:590px){
+            margin-bottom: rem(23);
+        }
+    }
+
+    &__form {
+    }
+}
+.form-quest {
+
+    &__body {
+    }
+
+    &__input {
+    }
+
+    &__button-row {
+    }
+
+    &__button {
+    }
+}
+.calc {
+
+    &__form {
+    }
+}
+.form-calc {
+
+    &__body {
+    }
+
+    &__row {
+    }
+
+    &__button-row {
+    }
+}
+.text {
+}
+.button {
+}

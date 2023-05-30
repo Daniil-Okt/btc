@@ -1,0 +1,142 @@
+.industry {
+    position: relative;
+    padding: rem(64) 0 rem(115) 0;
+
+    @media(max-width:1000px){
+        padding: rem(64) 0 rem(86) 0;
+    }
+    @media(max-width:590px){
+        padding: rem(40) 0 rem(40) 0;
+        gap: rem(8);
+    }
+    background: linear-gradient(90deg, #303030 59.81%, rgba(48, 48, 48, 0.58) 100%);
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        max-width: rem(830);
+        height: 100%;
+        background: url(@img/industry-fon.png) no-repeat center center / cover;
+        top:0;
+        right: 0;
+        z-index: -1;
+    }
+    &__container {
+    }
+
+    &__title {
+        h2 {
+            color: $whiteColor;
+        }
+        margin-bottom: rem(64);
+        @media(max-width:1000px){
+            margin-bottom: rem(42);
+        }
+        @media(max-width:590px){
+            margin-bottom: rem(23);
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin: 0 rem(-15);
+        row-gap: rem(25);
+        @media(max-width:995px){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+    }
+}
+.item-industry {
+    flex: 0 1 16.666666667%;
+    padding: 0 rem(15);
+    @media(max-width:995px){
+        flex: 0 1 33.33333%;
+    }
+    @media(max-width:540px){
+        flex: 0 1 50%;
+    }
+    @media(max-width:420px){
+        flex: 0 1 100%;
+    }
+    &__body {
+
+    }
+    &__year {
+        font-weight: 600;
+            font-size: rem(24);
+            line-height: 140%;
+
+            letter-spacing: 0.02em;
+            color: $whiteColor;
+            margin-right: rem(-50);
+            @media(max-width:1365px){
+                max-width: rem(95);
+                margin-right: 0;
+            }
+            @media(max-width:1000px){
+                font-size: rem(21);
+                max-width: rem(80);
+            }
+
+        span {
+            font-weight: 500;
+            font-size: rem(36);
+            color: #EF7F1A;
+            letter-spacing: 0.02em;
+            @media(max-width:1000px){
+                font-size: rem(33);
+            }
+        }
+    }
+
+    &__rectal {
+        margin-top: rem(8);
+        max-width: rem(166);
+        background-color: #EF7F1A;
+        height: rem(1);
+        @media(max-width:420px){
+            max-width: rem(268);
+        }
+    }
+
+    &__text {
+        margin-top: rem(8);
+        font-size: rem(16);
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+
+    &__button-row {
+        margin-top: rem(42);
+        justify-content: end;
+        display: flex;
+        gap: rem(24);
+        @media(max-width:1000px){
+            margin-top: rem(24);
+            
+        }
+    }
+
+    &__button {
+        &:first-child {
+            color: $whiteColor;
+        }
+        @media(max-width:1000px){
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+.item-indust {
+
+    &__body {
+    }
+}
+.button {
+}
+.trans {
+}
