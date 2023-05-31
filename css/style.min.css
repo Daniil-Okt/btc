@@ -415,6 +415,10 @@ body.lock {
   padding-top: 6.25rem;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 h2 {
   font-family: "Rubik";
   font-weight: 500;
@@ -1491,28 +1495,6 @@ input, input::placeholder {
   justify-content: center;
 }
 @media (min-width: 75em) {
-  .decor {
-    top: 0.00000625rem;
-  }
-}
-@media (min-width: 25.625em) and (max-width: 75em) {
-  @supports (top: clamp( 0.00000625rem , 0.00000625rem  +  0vw , 0.00000625rem )) {
-    .decor {
-      top: clamp( 0.00000625rem , 0.00000625rem  +  0vw , 0.00000625rem );
-    }
-  }
-  @supports not (top: clamp( 0.00000625rem , 0.00000625rem  +  0vw , 0.00000625rem )) {
-    .decor {
-      top: calc(0.00000625rem + -0.4375 * (100vw - 25.625rem) / 49.375);
-    }
-  }
-}
-@media (max-width: 25.625em) {
-  .decor {
-    top: 0.00000625rem;
-  }
-}
-@media (min-width: 75em) {
   .decor__img {
     width: 66.75rem;
   }
@@ -1532,6 +1514,11 @@ input, input::placeholder {
 @media (max-width: 25.625em) {
   .decor__img {
     width: 19.005rem;
+  }
+}
+@media (max-width: 590px) {
+  .decor {
+    top: -0.1875rem;
   }
 }
 
