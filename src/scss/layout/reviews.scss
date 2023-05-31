@@ -1,0 +1,145 @@
+.reviews {
+    position: relative;
+    background-color: #F3FFFE;
+    &__container {
+        padding-top: rem(96);
+        padding-bottom: rem(96);
+        @media(max-width:1000px){
+            padding-top: rem(80);
+            padding-bottom: rem(80);        }
+        @media(max-width:590px){
+            padding-top: rem(40);
+            padding-bottom: rem(40);
+        }
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: rem(64);
+        @media(max-width:1000px){
+            margin-bottom: rem(42);
+        }
+        @media(max-width:590px){
+            margin-bottom: rem(23);
+        }
+    }
+    &__swiper {
+    }
+}
+.swiper-rewiews {
+    // margin: 0 rem(-12);
+    &__wrapper {
+       
+    }
+
+    &__slide {
+    }
+    @media(max-width:650px){
+        .swiper-slide {
+            opacity: 0.5;
+            transition: opacity 0.3s ease  0s;
+        }
+        .swiper-slide-active {
+            opacity: 1;
+        }
+    }
+}
+.swiper-wrapper {
+}
+.slide-rewiews {
+    // padding: 0 rem(12);
+    // display: flex;
+    
+    min-height: 100%;
+    &__body {
+        height: rem(277);
+        background-color: $whiteColor;
+        padding: rem(30) rem(16) rem(20);
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__img {
+        max-width: rem(79);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__contact {
+        margin-left: rem(15);
+    }
+
+    &__name {
+        font-weight: 600;
+        line-height: 130%;
+
+        letter-spacing: 0.02em;
+    }
+
+    &__data {
+        margin-top: rem(4);
+        font-size: rem(14);
+        line-height: 140%;
+    }
+
+    &__row-star {
+        margin-top: rem(6);
+        display: flex;
+    }
+
+    &__star {
+        svg {
+            display: block;
+            max-width: rem(15);
+            max-height: rem(14);
+            
+            path {
+                fill: #EF7F1A;
+            }
+            
+        }
+        &.black {
+            svg  {
+                path {
+                    fill: #505055;
+                }
+            }
+        }
+    }
+
+    &__text {
+        flex: auto;
+        margin-top: rem(16);
+        font-size: rem(14);
+        line-height: 140%;
+        color: #303030;
+    }
+
+    &__button-row {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__button {
+        display: inline-block;
+        
+        font-size: rem(14);
+        line-height: 140%;
+        color: #478ECC;
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        &:hover {
+            color: #0068c4;
+        }
+    }
+}
+.swiper-slide {
+}
+.black {
+}

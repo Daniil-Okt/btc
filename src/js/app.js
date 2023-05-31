@@ -71,8 +71,8 @@ headerFixed()
 * data-da="class блока куда нужно перебросить, брекпоинт(ширина экрана), позиция в блоке(цифра либо first,last)"
 */
 /*Расскоментировать для использования*/
-// import { useDynamicAdapt } from './modules/dynamicAdapt.js'
-// useDynamicAdapt()
+import { useDynamicAdapt } from './modules/dynamicAdapt.js'
+useDynamicAdapt()
 // =======================================================================================================
 
 
@@ -94,7 +94,7 @@ headerFixed()
 
 // =======================================================================================================
 
-const swiper = new Swiper('.swiper-about', {
+const swiperAbout = new Swiper('.swiper-about', {
   modules: [Autoplay, Navigation, Pagination],
   speed: 800,
   spaceBetween: 0,
@@ -110,13 +110,73 @@ const swiper = new Swiper('.swiper-about', {
 
 });
 
-const checkboxQuizItem = document.querySelectorAll('.checkbox-quiz__item');
-const checkboxQuizLabel = document.querySelectorAll('.checkbox-quiz__label');
 
-if (checkboxQuizLabel.length > 0) {
-  checkboxQuizLabel.forEach(item => {
+
+const radioQuizLabel = document.querySelectorAll('.radio-quiz__label');
+if(radioQuizLabel.length > 0){
+  radioQuizLabel.forEach(item => {
     item.addEventListener('click', () => {
-      item.parentNode.classList.toggle('_active');
-    });
+      if(!item.parentNode.classList.contains('_active')){
+        if (radioQuizLabel.length > 0) {
+          radioQuizLabel.forEach(sub => {
+            if(sub.parentNode.classList.contains('_active')) {
+              sub.parentNode.classList.remove('_active')
+            }
+          });
+        }
+        item.parentNode.classList.add('_active')
+    } else {
+      item.parentNode.classList.remove('_active')
+    }
+    })
   });
 }
+
+
+
+
+
+const swiperRewiews = new Swiper('.swiper-rewiews', {
+  speed: 400,
+  spaceBetween: 20,
+  slidesPerView: 1.3,
+  modules: [Autoplay],
+  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnIteration: false,
+  },
+  breakpoints: {
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      slideToClickedSlide: true,
+  },
+    950: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        slideToClickedSlide: true,
+    },
+    1300: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        slideToClickedSlide: true,
+    }
+  },
+});
+
+
+
+
+
+
+const wrapper = document.querySelector('.wrapper')
+window.onscroll = onScroll;
+  function onScroll() {
+    var top = window.pageYOffset;
+    if (top > 60) {
+      wrapper.classList.add('hide');
+    } else {
+      wrapper.classList.remove('hide');
+    }
+  }
