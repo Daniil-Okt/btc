@@ -90,3 +90,6 @@ body {
     padding-top: rem($headerHeight);
   }
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}

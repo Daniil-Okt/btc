@@ -45,6 +45,9 @@
     &__img {
         @include adaptiveClamp(width, 1068, 304.08);
     }
+    @media(max-width:590px){
+        top: rem(-3);
+    }
 }
 .item-projects {
     padding: 0 rem(12);

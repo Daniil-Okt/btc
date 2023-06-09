@@ -105,12 +105,10 @@ const swiperAbout = new Swiper('.swiper-about', {
   },
   autoplay: {
     delay: 4000,
+    disableOnInteraction: false,
   },
   
-
 });
-
-
 
 const radioQuizLabel = document.querySelectorAll('.radio-quiz__label');
 if(radioQuizLabel.length > 0){
@@ -131,10 +129,6 @@ if(radioQuizLabel.length > 0){
     })
   });
 }
-
-
-
-
 
 const swiperRewiews = new Swiper('.swiper-rewiews', {
   speed: 400,
@@ -164,11 +158,6 @@ const swiperRewiews = new Swiper('.swiper-rewiews', {
     }
   },
 });
-
-
-
-
-
 
 const wrapper = document.querySelector('.wrapper')
 window.onscroll = onScroll;
